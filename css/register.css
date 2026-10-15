@@ -1,0 +1,139 @@
+/* Registration form for Swiss Knots 2027, on top of the Monochromed template. */
+
+#regform {
+	max-width: 46em;
+	margin: 1.5em 0 1em 0;
+}
+
+#regform .field-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 1.5em;
+}
+
+#regform .field-row .field {
+	flex: 1 1 16em;
+}
+
+#regform .field {
+	margin-bottom: 1em;
+}
+
+#regform label {
+	display: block;
+	font-weight: bold;
+	line-height: 1.6em;
+	margin-bottom: 0.25em;
+}
+
+#regform input[type="text"],
+#regform input[type="email"],
+#regform select,
+#regform textarea {
+	display: block;
+	width: 100%;
+	padding: 0.45em 0.6em;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	background: #fff;
+	color: #222;
+	line-height: 1.5em;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+#regform select {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23666' stroke-width='1.6'/%3E%3C/svg%3E");
+	background-position: right 0.8em center;
+	background-size: 12px 8px;
+	background-repeat: no-repeat;
+	padding-right: 2.2em;
+}
+
+#regform textarea {
+	resize: vertical;
+}
+
+#regform input:focus,
+#regform select:focus,
+#regform textarea:focus {
+	outline: none;
+	border-color: #ff0000;
+	box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15);
+}
+
+#regform .invalid {
+	border-color: #c00 !important;
+	background-color: #fff6f6 !important;
+}
+
+#regform .checks {
+	margin: 0.5em 0 1.25em 0;
+}
+
+#regform label.check {
+	display: flex;
+	align-items: baseline;
+	gap: 0.6em;
+	font-weight: normal;
+	margin-bottom: 0.4em;
+	cursor: pointer;
+}
+
+#regform label.check input {
+	flex: none;
+	width: 1em;
+	height: 1em;
+	-webkit-appearance: checkbox;
+	appearance: auto;
+}
+
+#regform label.check[hidden] {
+	display: none;
+}
+
+#regform .cf-turnstile {
+	margin: 0.5em 0 1em 0;
+	min-height: 65px;
+}
+
+#regform button {
+	display: inline-block;
+	padding: 0.6em 2.2em;
+	border: 0;
+	border-radius: 40px;
+	background: rgba(19, 19, 19, 0.85);
+	color: #fff;
+	font-family: inherit;
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#regform button:hover {
+	background: #000;
+}
+
+#regform button:disabled {
+	opacity: 0.5;
+	cursor: wait;
+}
+
+#formstatus {
+	margin-top: 1em;
+	min-height: 1.5em;
+}
+
+#formstatus.error,
+.formerror {
+	color: #c00;
+}
+
+#regdone {
+	margin: 1.5em 0;
+	padding: 1em 1.5em;
+	border-left: 4px solid #ff0000;
+	background: #f6f6f6;
+}

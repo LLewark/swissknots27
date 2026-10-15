@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<!--
+	Monochromed by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+	<head>
+		<title>Swiss Knots 2027</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Swiss Knots 2027, a conference on knot theory and low-dimensional topology, University of Neuch&acirc;tel, 22&ndash;25 June 2027." />
+		<meta name="keywords" content="knot theory, low-dimensional topology, conference, Neuch&acirc;tel" />
+		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<link rel="stylesheet" href="css/register.css" />
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+		<script src="js/register.js" defer></script>
+	</head>
+	<body class="homepage">
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+
+				<!-- Logo -->
+					<div id="logo">
+						<h1><a href="index.html">Swiss Knots 2027</a></h1>
+						<span>22 &ndash; 25 June</span>
+					</div>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Overview</a></li>
+							<li><a href="program.html">Program</a></li>
+							<li><a href="info.html">Info</a></li>
+							<li class="active"><a href="register.html">Registration</a></li>
+							<li><a href="participants.html">Participants</a></li>
+							<li><a href="organizers.html">Organizers</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+
+	<!-- Main -->
+		<div id="main" class="mainpart">
+			<div class="container">
+				<p><b>Registration:</b><br>
+				Please register for the conference using the form below. The registration deadline will be announced here.
+				You will receive a confirmation by email. To change your registration later, simply submit the form again with the same email address.</p>
+
+				<!--
+					CONFIGURATION: data-endpoint is the URL of the registration Worker,
+					data-sitekey (further down) is the Cloudflare Turnstile site key.
+					The site key below is Cloudflare's public test key, which always passes.
+				-->
+				<form id="regform" data-endpoint="https://REPLACE-WITH-WORKER-URL.workers.dev" novalidate>
+					<div class="field-row">
+						<div class="field">
+							<label for="first_name">First name *</label>
+							<input type="text" id="first_name" name="first_name" autocomplete="given-name" maxlength="100" required>
+						</div>
+						<div class="field">
+							<label for="last_name">Last name *</label>
+							<input type="text" id="last_name" name="last_name" autocomplete="family-name" maxlength="100" required>
+						</div>
+					</div>
+					<div class="field-row">
+						<div class="field">
+							<label for="email">Email *</label>
+							<input type="email" id="email" name="email" autocomplete="email" maxlength="200" required>
+						</div>
+						<div class="field">
+							<label for="institution">Home institution *</label>
+							<input type="text" id="institution" name="institution" autocomplete="organization" maxlength="200" required>
+						</div>
+					</div>
+					<div class="field">
+						<label for="career_stage">Career stage *</label>
+						<select id="career_stage" name="career_stage" required>
+							<option value="" selected disabled>Please choose&hellip;</option>
+							<option>Bachelor's or Master's student</option>
+							<option>PhD student</option>
+							<option>Postdoc</option>
+							<option>Other non-permanent position</option>
+							<option>Permanent position</option>
+							<option>Other</option>
+						</select>
+					</div>
+
+					<div class="checks">
+						<label class="check" id="funding_row">
+							<input type="checkbox" name="funding" value="yes">
+							<span>I would like to apply for financial support (see below).</span>
+						</label>
+						<label class="check">
+							<input type="checkbox" name="visa_letter" value="yes">
+							<span>I need an invitation letter for visa purposes.</span>
+						</label>
+						<label class="check">
+							<input type="checkbox" name="certificate" value="yes">
+							<span>I need a certificate of attendance.</span>
+						</label>
+						<label class="check">
+							<input type="checkbox" name="public_listing" value="yes" checked>
+							<span>Include my name and institution in the public <a href="participants.html">list of participants</a>.</span>
+						</label>
+					</div>
+
+					<div class="field">
+						<label for="remarks">Further remarks</label>
+						<textarea id="remarks" name="remarks" rows="4" maxlength="3000"></textarea>
+					</div>
+
+					<div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+
+					<button type="submit" id="submit">Register</button>
+					<p id="formstatus" role="status" aria-live="polite"></p>
+				</form>
+				<div id="regdone" hidden></div>
+				<noscript><p class="formerror">The registration form needs JavaScript. If that is not possible for you, please register by email to one of the addresses below.</p></noscript>
+				<br>
+
+				<p><b>Financial support:</b><br>
+				We have limited funding to support participants without a permanent position.
+				To apply, tick the corresponding box in the registration form; we will get in touch with you about the details.</p><br>
+
+				<p><b>Your data:</b><br>
+				We use the information you enter only to organize the conference.
+				Your name and institution appear on the public list of participants only if you tick the corresponding box.</p>
+			</div>
+		</div>
+	<!-- Main -->
+
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="3u">
+						<section>
+							<ul class="style1">
+								<li>Contact:<br><a href="mailto:lukas.lewark@math.ethz.ch">lukas.lewark@math.ethz.ch</a><br><a href="mailto:peter.feller@unine.ch">peter.feller@unine.ch</a></li>
+								<li><a href="http://www.swissknots.ch/Home.html" target="_blank"><img src="images/swissknots-link.png" style="width: 200px;" alt="Swiss Knots"></a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="3u">
+						<section>
+							<ul class="style1">
+								<li>Supported by:<br><a href="https://www.unine.ch/" target="_blank">Universit&eacute; de Neuch&acirc;tel</a></li>
+								<!-- To show the logo instead, put it in images/ and use e.g.:
+								<li><a href="https://www.unine.ch/" target="_blank"><img src="images/uninelogo.png" style="width: 350px; margin-bottom: 10px;" alt="Universit&eacute; de Neuch&acirc;tel"></a></li>
+								-->
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- Footer -->
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a>.
+				<!-- Header photo credit goes here, e.g.:
+				Header photo by <a href="https://commons.wikimedia.org/wiki/File:...">Author</a> - CC BY-SA 4.0, modified. -->
+			</div>
+		</div>
+
+	</body>
+</html>
