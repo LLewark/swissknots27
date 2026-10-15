@@ -28,6 +28,7 @@
 
 #regform input[type="text"],
 #regform input[type="email"],
+#regform input[type="number"],
 #regform select,
 #regform textarea {
 	display: block;
@@ -90,6 +91,47 @@
 
 #regform label.check[hidden] {
 	display: none;
+}
+
+/* Financial support details, below the funding checkbox */
+#funding_details {
+	margin: 0.4em 0 1em 1.6em;
+	padding: 0.9em 1.2em 0.1em 1.2em;
+	border-left: 3px solid #ff0000;
+	background: rgba(0, 0, 0, 0.03);
+}
+
+#funding_details[hidden] {
+	display: none;
+}
+
+#regform #expenses_chf {
+	max-width: 12em;
+}
+
+#regform input[type="file"] {
+	display: block;
+	width: 100%;
+	padding: 0.35em 0;
+	line-height: 1.5em;
+	font-family: inherit;
+	font-size: 0.95em;
+}
+
+#regform input[type="file"]::file-selector-button {
+	margin-right: 0.9em;
+	padding: 0.35em 1.1em;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	background: #fff;
+	color: #222;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+#regform input[type="file"].invalid::file-selector-button {
+	border-color: #c00;
+	background: #fff6f6;
 }
 
 #regform .cf-turnstile {
