@@ -3,7 +3,6 @@
 (function () {
 	'use strict';
 
-	var PERMANENT = 'Permanent position';
 	var MAX_CV_BYTES = 20 * 1024 * 1024;
 
 	function init() {
@@ -15,31 +14,24 @@
 		var button = document.getElementById('submit');
 		var done = document.getElementById('regdone');
 		var stage = document.getElementById('career_stage');
-		var fundingRow = document.getElementById('funding_row');
-		var fundingBox = fundingRow.querySelector('input');
+		var fundingBox = document.getElementById('funding_row').querySelector('input');
 		var details = document.getElementById('funding_details');
 		var cvInput = document.getElementById('cv');
 		var expensesInput = document.getElementById('expenses_chf');
 
-		// Financial support is only for participants without a permanent position.
-		// The CV, expenses and explanation fields are shown (and sent) only while
-		// the financial support box is ticked; disabled fields are not submitted.
+		// The career stage, CV, expenses and explanation fields are shown (and sent)
+		// only while the financial support box is ticked; disabled fields are not submitted.
 		function updateFunding() {
-			var permanent = stage.value === PERMANENT;
-			fundingRow.hidden = permanent;
-			fundingBox.disabled = permanent;
-			if (permanent) fundingBox.checked = false;
-
-			var applying = fundingBox.checked && !permanent;
+			var applying = fundingBox.checked;
 			details.hidden = !applying;
-			Array.prototype.forEach.call(details.querySelectorAll('input, textarea'), function (el) {
+			Array.prototype.forEach.call(details.querySelectorAll('input, textarea, select'), function (el) {
 				el.disabled = !applying;
 				if (!applying) el.classList.remove('invalid');
 			});
+			stage.required = applying;
 			cvInput.required = applying;
 			expensesInput.required = applying;
 		}
-		stage.addEventListener('change', updateFunding);
 		fundingBox.addEventListener('change', updateFunding);
 		updateFunding();
 
@@ -95,6 +87,7 @@
 			});
 			if (firstInvalid) {
 				var message = 'Please fill in all fields marked with * (and check the email address).';
+				if (firstInvalid === stage) message = 'Please choose your career stage.';
 				if (firstInvalid === cvInput) message = 'Please upload your CV (PDF) to apply for financial support.';
 				if (firstInvalid === expensesInput) message = 'Please enter your expected expenses in Swiss francs (a number).';
 				setStatus(message, true);

@@ -84,19 +84,6 @@
 							<input type="text" id="institution" name="institution" autocomplete="organization" maxlength="200" required>
 						</div>
 					</div>
-					<div class="field">
-						<label for="career_stage">Career stage *</label>
-						<select id="career_stage" name="career_stage" required>
-							<option value="" selected disabled>Please choose&hellip;</option>
-							<option>Bachelor's or Master's student</option>
-							<option>PhD student</option>
-							<option>Postdoc</option>
-							<option>Other non-permanent position</option>
-							<option>Permanent position</option>
-							<option>Other</option>
-						</select>
-					</div>
-
 					<div class="checks">
 						<label class="check" id="funding_row">
 							<input type="checkbox" name="funding" value="yes">
@@ -104,6 +91,17 @@
 						</label>
 						<!-- Shown and enabled only while the financial support box is ticked (js/register.js). -->
 						<div id="funding_details" hidden>
+							<div class="field">
+								<label for="career_stage">Career stage *</label>
+								<select id="career_stage" name="career_stage" disabled>
+									<option value="" selected disabled>Please choose&hellip;</option>
+									<option>Bachelor's or Master's student</option>
+									<option>PhD student</option>
+									<option>Postdoc</option>
+									<option>Other non-permanent position</option>
+									<option>Other</option>
+								</select>
+							</div>
 							<div class="field">
 								<label for="cv">CV (PDF, at most 20&nbsp;MB) *</label>
 								<input type="file" id="cv" name="cv" accept="application/pdf,.pdf" disabled>
